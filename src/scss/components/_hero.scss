@@ -1,0 +1,76 @@
+.hero {
+  padding-bottom: 150px;
+
+  &__container {
+    display: flex;
+  }
+
+  &__text {
+    padding-top: 76px;
+    width: 48.6%;
+    margin-right: 77px;
+  }
+
+  &__name {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: capitalize;
+  }
+
+  &__title {
+    margin: 0;
+    margin-top: 14px;
+    color: var(--accent-color);
+  }
+
+  &__descr {
+    margin: 0;
+    margin-top: 22px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(#fff, 0.8);
+
+    span {
+      font-weight: 700;
+      color: rgba(#fff, 1);
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    border: 4px solid var(--white-color);
+    border-radius: 35px;
+    margin-top: 60px;
+    padding: 14px 39px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    transition: all .3s;
+
+    &:hover {
+      transform: scale(1.01);
+      border: 4px solid var(--accent-color);
+    }
+  }
+
+  &__image {
+    width: calc(100% - 48.6% - 77px);
+  }
+
+
+  &__picture {
+    display: flex;
+
+  }
+
+  &__pic {
+    border: 2px solid var(--accent-color);
+    border-radius: 2px;
+  }
+}
