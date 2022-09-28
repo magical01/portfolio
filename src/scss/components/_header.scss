@@ -46,4 +46,30 @@
     margin-left: 70px;
   }
 
+  &__link {
+    position: relative;
+    font-size: 16px;
+    color: rgba(#fff, 0.8);
+    transition: all .3s;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: currentColor;
+      transition: all .3s;
+    }
+
+    &:hover {
+      color: rgba(#fff, 1);
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
 }
