@@ -1,0 +1,180 @@
+.projects {
+
+  padding-bottom: 200px;
+
+  &__list {
+    margin-top: 90px;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__item +  &__item {
+    margin-top: 100px;
+  }
+
+  &__text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 98px;
+    width: 42%;
+
+    &:hover {
+      .projects__caption {
+        color: var(--accent-color);
+      }
+    }
+  }
+
+  &__caption {
+    margin: 0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    transition: all .3s;
+  }
+
+  &__subject {
+    margin: 0;
+    margin-top: 55px;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  &__link {
+    padding: 15px 60px;
+  }
+
+  &__image {
+    position: relative;
+    width: calc(100% - 42% - 98px);
+    height: fit-content;
+    overflow: hidden;
+
+    &:hover {
+      .projects__picture {
+        transform: scale(1.02);
+      }
+    }
+  }
+
+
+  &__picture {
+    position: relative;
+    display: flex;
+    transition: all .3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border: 2px solid var(--accent-color);
+      border-radius: 2px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+}
+
+.technologies {
+  width: 100%;
+  cursor: pointer;
+
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 55px;
+  }
+
+  &__name {
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    opacity: 0.8;
+  }
+
+  &__name + &__name {
+    margin-top: 12px;
+  }
+
+}
+
+.site-link {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.projects__pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  position: relative;
+  left: 47%;
+  bottom: 30px;
+  z-index: 50;
+}
+
+.swiper-pagination-bullet {
+  width: 11px;
+  height: 11px;
+  background: var(--white-color);
+  transition: all .2s;
+}
+
+.projects-btn-next {
+  position: absolute;
+  left: 0px;
+  z-index: 50;
+
+  svg {
+    opacity: 0.5;
+    transition: all .3s;
+  }
+
+  &:hover {
+    svg {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 1;
+    }
+  }
+
+}
+
+.projects-btn-prev {
+  position: absolute;
+  right: 0px;
+  z-index: 50;
+
+  svg {
+    opacity: 0.5;
+    transition: all .3s;
+  }
+
+  &:hover {
+    svg {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 1;
+    }
+  }
+
+}

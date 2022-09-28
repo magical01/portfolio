@@ -22,7 +22,7 @@ html {
   font-weight: 400;
   font-size: 20px;
   color: var(--white-color);
-  background: linear-gradient(176deg, #060606 1.92%, #000000 98.75%);
+
 }
 
 img {
@@ -38,7 +38,10 @@ a {
 }
 
 .site-container {
+  position: relative;
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  background: linear-gradient(176deg, #060606 1.92%, #000000 98.75%);
+  background-repeat: no-repeat;
 }
 
 .is-hidden {
@@ -113,8 +116,28 @@ a {
 }
 
 .main-title {
+  margin: 0;
   font-weight: 700;
   font-size: 50px;
   line-height: 59px;
   text-transform: uppercase;
+}
+
+.main-link {
+  display: inline-block;
+  border: 4px solid var(--white-color);
+  border-radius: 35px;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 33px;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  transition: all .3s;
+
+
+  &:hover {
+    transform: scale(1.01);
+    border: 4px solid var(--accent-color);
+  }
 }

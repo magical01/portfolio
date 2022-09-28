@@ -1,0 +1,95 @@
+.skills {
+  padding-bottom: 190px;
+
+  &__title {
+    span {
+      color: var(--accent-color);
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    padding-left: 36px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      .skills__num {
+        color: var(--accent-color);
+      }
+
+      .skills__descr {
+        color: var(--accent-color);
+        transform: scale(1.01);
+      }
+    }
+  }
+
+  &__item +  &__item  {
+    margin-top: 30px;
+  }
+
+  &__num {
+    display: inline-block;
+    margin-right: 50px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    transition: all .3s;
+
+  }
+
+  &__descr {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    transition: all .3s;
+  }
+
+  &__image {
+    position: relative;
+    animation: 12s linear 0s infinite sphere-scale ;
+  }
+
+
+  &__picture {
+    position: absolute;
+    top: -110px;
+    right: -196px;
+    display: flex;
+    width: 538px;
+    animation: 18s linear 0s infinite sphere-rotate ;
+  }
+}
+
+@keyframes sphere-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sphere-scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
