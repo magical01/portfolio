@@ -18,21 +18,23 @@
     text-transform: capitalize;
     color: #FFFFFF;
     opacity: 0.9;
+
+    &:focus {
+      outline: 1px solid var(--accent-color);
+      outline-offset: 2px;
+    }
   }
 
 
   &__link {
-    border: 1px solid var(--white-color);
-    border-radius: 28px;
     padding: 12px 36px;
-    font-style: italic;
     font-size: 18px;
     line-height: 23px;
-    transition: all .3s;
 
-    &:hover {
-      border: 1px solid var(--accent-color);
-      color: var(--accent-color);
+    &:focus {
+      outline: 1px solid var(--accent-color);
+      outline-offset: 4px;
+      transition: none;
     }
   }
 }
@@ -69,6 +71,12 @@
       &:before {
         width: 100%;
       }
+    }
+
+    &:focus {
+      outline: 1px solid var(--accent-color);
+      outline-offset: 2px;
+      transition: none;
     }
   }
 

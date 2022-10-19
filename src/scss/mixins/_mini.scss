@@ -16,4 +16,15 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  }
+}
+
+@mixin gradient-white {
+  background: linear-gradient(90.6deg, #DDFF50 2.69%, #CBF619 98.04%), #FFFFFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+
+
