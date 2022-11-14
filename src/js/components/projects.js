@@ -1,5 +1,4 @@
 import vars from "../_vars";
-// import {initSliders} from './text-slider';
 
 document.addEventListener('DOMContentLoaded', () => {
   let countProjects = 2;
@@ -17,39 +16,39 @@ document.addEventListener('DOMContentLoaded', () => {
       for (let i = 0; i < data.length; i++) {
         if (i < count) {
           vars.projectsList.innerHTML += `
-          <li class="develop-projects__item">
-            <div class="develop-projects__text">
-              <h3 class="develop-projects__caption">${data[i].title}</h3>
-              <div class="develop-projects__technologes">
-                <span class="develop-projects__technologes-text">Верстка на HTML</span>
-                <span class="develop-projects__technologes-text">Работа с векторной графикой</span>
-                <span class="develop-projects__technologes-text">Сборка проекта на Gulp</span>
-                <span class="develop-projects__technologes-text">Работа с Git и GitHub</span>
+          <li class="projects__item">
+            <div class="projects__text">
+              <h3 class="projects__caption">${data[i].title}</h3>
+              <div class="projects__technologes">
+                <span class="projects__technologes-text">Верстка на HTML</span>
+                <span class="projects__technologes-text">Работа с векторной графикой</span>
+                <span class="projects__technologes-text">Сборка проекта на Gulp</span>
+                <span class="projects__technologes-text">Работа с Git и GitHub</span>
               </div>
-              <div class="develop-projects__buttons">
-                <button class="develop-projects__btn main-link btn-reset">
+              <div class="projects__buttons">
+                <button class="projects__btn main-link btn-reset" data-graph-path="project-${data[i].id}">
                   О проекте
-                  <svg class="develop-projects__btn-icon">
+                  <svg class="projects__btn-icon">
                     <use xlink:href="img/sprite.svg#right-arrow"></use>
                   </svg>
                 </button>
-                <a class="develop-projects__link main-link--transparent" href="#">
+                <a class="projects__link main-link--transparent" href="${data[i].linkGit}" target="_blank">
                   Репозиторий в Git
-                  <svg class="develop-projects__link-icon">
+                  <svg class="projects__link-icon">
                     <use xlink:href="img/sprite.svg#right-arrow"></use>
                   </svg>
                 </a>
               </div>
             </div>
-            <div class="develop-projects__image">
-              <picture class="develop-projects__picture">
+            <div class="projects__image">
+              <picture class="projects__picture">
                 <source srcset="img/${data[i].image}.avif" type="image/avif">
                 <source srcset="img/${data[i].image}.webp" type="image/webp">
                 <img loading="lazy" src="img/${data[i].image}.png" class="image" width="595" height="320" alt="${data[i].title}">
               </picture>
-              <button class="develop-projects__picture-btn btn-reset main-link">
+              <button class="projects__picture-btn btn-reset main-link" data-graph-path="project-${data[i].id}">
                 О проекте
-                <svg class="develop-projects__btn-icon">
+                <svg class="projects__btn-icon">
                   <use xlink:href="img/sprite.svg#right-arrow"></use>
                 </svg>
               </button>

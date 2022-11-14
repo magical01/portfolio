@@ -1,25 +1,33 @@
 [
   {
+    "id": 1,
     "title": "Интернет-магазин светильников",
     "link": "https://magical01.github.io/splendor-store/",
+    "linkGit": "https://github.com/magical01/splendor-store",
     "image": "project-1",
     "selector": "fixtures"
   },
   {
+    "id": 2,
     "title": "Интернет-магазин замков",
     "link": "https://magical01.github.io/lock-online-store/",
+    "linkGit": "https://github.com/magical01/lock-online-store",
     "image": "project-4",
     "selector": "locks"
   },
   {
+    "id": 3,
     "title": "Сайт для курса по фитнесу",
     "link": "https://magical01.github.io/fitness-page/",
+    "linkGit": "https://github.com/magical01/fitness-page",
     "image": "project-2",
     "selector": "fitness"
   },
   {
+    "id": 4,
     "title": "Сайт для путешествий",
     "link": "https://magical01.github.io/Travel/",
+    "linkGit": "https://github.com/magical01/Travel",
     "image": "project-3",
     "selector": "travel"
   }

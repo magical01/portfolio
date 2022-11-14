@@ -3,6 +3,6 @@ export default {
   documentEl: document,
   htmlEl: document.documentElement,
   bodyEl: document.body,
-  projectsList: document.querySelector('.develop-projects__list'),
-  btnMore: document.querySelector('.projects__btn'),
+  projectsList: document.querySelector('.projects__list'),
+  btnMore: document.querySelector('.projects__load'),
 }
