@@ -1,14 +1,37 @@
 .hero {
-  padding-bottom: 318px;
+  padding-bottom: 200px;
+
+  @include xxl-tablet {
+    padding-bottom: 150px;
+  }
+
+  @include small-tablet {
+    padding-bottom: 80px;
+  }
 
   &__container {
     display: flex;
+
+    @include xxl-tablet {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__text {
     margin-right: 3.9%;
     padding-top: 102px;
     width: 47.9%;
+
+    @include xxl-tablet {
+      margin-right: 0;
+      padding-top: 0px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__name {
@@ -19,6 +42,11 @@
     font-size: 40px;
     line-height: 47px;
     text-transform: capitalize;
+
+    @include small-tablet {
+      font-size: 30px;
+      line-height: 37px;
+    }
   }
 
   &__title {
@@ -34,16 +62,66 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
-    color: rgba(#fff, 0.8);
+    color: rgba(#fff, 1);
 
     span {
       font-weight: 700;
       color: rgba(#fff, 1);
     }
+
+    @include mini-mobile {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__technologies {
+    margin-bottom: 33px;
+
+    strong {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  &__item {
+    border-radius: 15px;
+    border: 1px solid #676767;
+    padding: 6px 15px;
+    width: fit-content;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--white-color);
+    background-color: transparent;
+
+    @include mini-mobile {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
   }
 
   &__link {
     padding: 14px 44px;
+
+    @include xxl-tablet {
+      width: 550px;
+    }
+
+    @include xl-mobile {
+      width: 100%;
+    }
+
+    @include mobile {
+      padding: 11px 20px;
+    }
 
     &:focus {
       outline: 1px solid var(--accent-color);
@@ -55,8 +133,15 @@
 
   &__image {
     position: relative;
-    width:calc(100% - 47.9% - 3.9%);
+    width: calc(100% - 47.9% - 3.9%);
 
+    @include xxl-tablet {
+      order: -1;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
   }
 
 
@@ -65,11 +150,40 @@
     position: relative;
     display: flex;
 
+    @include xxl-tablet {
+      padding-top: 0px;
+    }
+
+    @include xl-mobile {
+      justify-content: center;
+    }
+
     img {
       position: absolute;
-      left: 0;
+      left: 2px;
       top: -25px;
       z-index: 2;
+
+      @include big-desktop {
+        left: 1px;
+        top: -26px;
+      }
+
+      @include xxl-tablet {
+        position: relative;
+        left: auto;
+        top: auto;
+      }
+
+      @include xl-mobile {
+        width: 400px;
+        left: 0px;
+        bottom: -15px;
+      }
+
+      @include mini-mobile {
+        width: 280px;
+      }
     }
 
     &::before {
@@ -82,6 +196,22 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
+
+      @include xxl-tablet {
+        left: 0px;
+        top: 101px;
+      }
+
+      @include xl-mobile {
+        top: 22px;
+        width: 400px;
+
+      }
+
+      @include mini-mobile {
+        top: -46px;
+        width: 280px;
+      }
     }
   }
 }

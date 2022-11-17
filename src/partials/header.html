@@ -1,13 +1,25 @@
 <header class="header">
   <div class="container header__container">
     <a class="header__logo" href="#">Портфолио</a>
-    <nav class="nav" title="Главное меню">
+    <nav class="nav" title="Главное меню" data-menu>
       <ul class="nav__list list-reset">
-        <li class="nav__item"><a class="nav__link" href="#hero">Обо мне</a></li>
-        <li class="nav__item"><a class="nav__link" href="#projects">Проекты</a></li>
-        <li class="nav__item"><a class="nav__link" href="#footer">Контакты</a></li>
+        <li class="nav__item"><a class="nav__link" href="#hero" data-menu-item>Обо мне</a></li>
+        <li class="nav__item"><a class="nav__link" href="#projects" data-menu-item>Проекты</a></li>
+        <li class="nav__item"><a class="nav__link" href="#footer" data-menu-item>Контакты</a></li>
       </ul>
+      <div class="nav__social-mobile">
+        <a class="social__icon" href="https://t.me/magixxl"  target="_blank">
+          <svg class="social__icon--tg">
+            <use xlink:href="img/sprite.svg#tg"></use>
+          </svg>
+        </a>
+      </div>
+      <a class="nav__contact nav__mobile" href="tel:+79223807304">+7 922 380-73-04</a>
+      <a class="nav__contact nav__mail" href="mailto:magicalfront@gmail.com">magicalfront@gmail.com</a>
     </nav>
     <a class="header__link main-link--transparent" href="#footer">Напишите мне</a>
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+      <span class="burger__line"></span>
+    </button>
   </div>
 </header>
