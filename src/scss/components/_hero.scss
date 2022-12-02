@@ -1,0 +1,87 @@
+.hero {
+  padding-bottom: 318px;
+
+  &__container {
+    display: flex;
+  }
+
+  &__text {
+    margin-right: 3.9%;
+    padding-top: 102px;
+    width: 47.9%;
+  }
+
+  &__name {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    text-transform: capitalize;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    @include gradient
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 33px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(#fff, 0.8);
+
+    span {
+      font-weight: 700;
+      color: rgba(#fff, 1);
+    }
+  }
+
+  &__link {
+    padding: 14px 44px;
+
+    &:focus {
+      outline: 1px solid var(--accent-color);
+      outline-offset: 4px;
+      transition: none;
+    }
+
+  }
+
+  &__image {
+    position: relative;
+    width:calc(100% - 47.9% - 3.9%);
+
+  }
+
+
+  &__picture {
+    padding-top: 75px;
+    position: relative;
+    display: flex;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: -25px;
+      z-index: 2;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 565px;
+      height: 435px;
+      z-index: 1;
+      background-image: url("../img/ellipse.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}

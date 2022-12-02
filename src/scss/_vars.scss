@@ -1,0 +1,14 @@
+
+// colors
+:root {
+  // base
+  --font-family: "Muller", sans-serif;
+  --content-width: 1170px;
+  --container-offset: 135px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --white-color: #fff;
+  --black-color: #000;
+  --accent-color: #DDFF50;
+}

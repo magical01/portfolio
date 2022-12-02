@@ -1,0 +1,41 @@
+.contact {
+  padding-bottom: 150px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    span {
+      font-style: italic;
+      color: var(--accent-color);
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    border-left: 1px solid #FFFFFF;
+    border-radius: 35px;
+    padding-left: 42px;
+    height: 61px;
+  }
+
+  &__text {
+    margin-right: 111px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  &__link {
+    padding: 14px 38px;
+  }
+}
