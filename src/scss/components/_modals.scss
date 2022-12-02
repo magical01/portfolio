@@ -2,9 +2,17 @@
   &__container {
     border-radius: 20px;
     width: 972px;
-    // height: 584px;
     padding: 41px 39px 74px 50px;
     background-color: var(--white-color);
+
+    @include tablet {
+      padding: 30px 30px 50px 30px;
+      width: 95%;
+    }
+
+    @include mobile {
+      padding: 20px;
+    }
   }
 
   &__title {
@@ -14,6 +22,11 @@
     font-size: 24px;
     line-height: 36px;
     color: #000;
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 32px;
+    }
   }
 
   &__top {
@@ -21,6 +34,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 58px;
+
+    @include small-tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__close {
@@ -28,9 +45,19 @@
     width: 40px;
     height: 40px;
 
+    @include mini-mobile {
+      width: 30px;
+      height: 30px;
+    }
+
     svg {
       opacity: 1;
       transition: opacity .3s;
+
+      @include mini-mobile {
+        width: 30px;
+        height: 30px;
+      }
     }
 
     &:hover {
@@ -43,6 +70,10 @@
 
   &__list {
     margin-bottom: 50px;
+
+    @include small-tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__item {
@@ -50,6 +81,11 @@
     font-size: 18px;
     line-height: 27px;
     color: #000;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
 
     & + & {
       margin-top: 30px;
@@ -61,6 +97,11 @@
       a {
         position: relative;
         font-weight: 500;
+
+        @include small-tablet {
+          display: block;
+          width: fit-content;
+        }
 
         &::before {
           content: "";
@@ -96,9 +137,14 @@
     background-color: var(--accent-color);
     transition: background-color .3s, border .3s;
 
+    @include mobile {
+      padding: 11px 20px;
+      width: 100%;
+    }
+
     &:hover {
       border: 1px solid var(--accent-color);
-      background-color: transparent;
+      background-color: var(--white-color);
       transition: background-color .3s, border .3s;
     }
   }

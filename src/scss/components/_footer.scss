@@ -12,7 +12,6 @@
 
   &__item {
     display: flex;
-    margin-right: 92px;
     font-family: "Raleway", sans-serif;
     font-size: 24px;
     line-height: 36px;
@@ -20,11 +19,25 @@
     &:not(:last-child) {
       margin-bottom: 30px;
     }
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__info {
+    & + & {
+      @include mobile {
+        margin-top: 20px;
+      }
+    }
+
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include mobile {
+        margin-right: 0;
+      }
     }
 
     &:focus {
@@ -54,10 +67,15 @@
     &--tg {
       width: 28px;
       height: 24px;
+      transform: translateX(-2px);
     }
 
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include small-tablet {
+        margin-right: 0px;
+      }
     }
 
     &:hover {

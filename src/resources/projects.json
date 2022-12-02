@@ -5,7 +5,11 @@
     "link": "https://magical01.github.io/splendor-store/",
     "linkGit": "https://github.com/magical01/splendor-store",
     "image": "project-1",
-    "selector": "fixtures"
+    "selector": "fixtures",
+    "text_1": "HTML, CSS, JS, SCSS, Gulp",
+    "text_2": "FlexBox, Grid, БЭМ",
+    "text_3": "Адаптивная и кроссбраузерная вёрстка",
+    "text_4": "Добавление товара в корзину"
   },
   {
     "id": 2,
@@ -13,23 +17,45 @@
     "link": "https://magical01.github.io/lock-online-store/",
     "linkGit": "https://github.com/magical01/lock-online-store",
     "image": "project-4",
-    "selector": "locks"
+    "selector": "locks",
+    "text_1": "HTML, CSS, JS, SCSS, Gulp",
+    "text_2": "FlexBox, Grid, БЭМ",
+    "text_3": "Адаптивная и кроссбраузерная вёрстка",
+    "text_4": "Добавление товара в корзину"
   },
   {
     "id": 3,
+    "title": "Сервис для поиска фильмов (React)",
+    "link": "https://magical01.github.io/react-movies-app/",
+    "linkGit": "https://github.com/magical01/react-movies-app",
+    "image": "project-5",
+    "selector": "react",
+    "text_1": "HTML, SCSS, Tailwind CSS, React, Webpack",
+    "text_2": "FlexBox, Grid",
+    "text_3": "Адаптивная и кроссбраузерная вёрстка",
+    "text_4": "Поиск фильмов и сериалов и фильтрация по ним"
+  },
+  {
+    "id": 4,
     "title": "Сайт для курса по фитнесу",
     "link": "https://magical01.github.io/fitness-page/",
     "linkGit": "https://github.com/magical01/fitness-page",
     "image": "project-2",
-    "selector": "fitness"
+    "selector": "fitness",
+    "text_1": "HTML, CSS, JS, SCSS, Gulp",
+    "text_2": "FlexBox, БЭМ",
+    "text_3": "Адаптивная и кроссбраузерная вёрстка"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Сайт для путешествий",
     "link": "https://magical01.github.io/Travel/",
     "linkGit": "https://github.com/magical01/Travel",
     "image": "project-3",
-    "selector": "travel"
+    "selector": "travel",
+    "text_1": "HTML, CSS, JS, SCSS, Gulp",
+    "text_2": "FlexBox, БЭМ",
+    "text_3": "Адаптивная и кроссбраузерная вёрстка"
   }
 
 ]

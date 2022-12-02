@@ -1,7 +1,7 @@
 import vars from "../_vars";
 
 document.addEventListener('DOMContentLoaded', () => {
-  let countProjects = 2;
+  let countProjects = 3;
   let dataLength = '';
 
   const fetchComments = (count = 2) => {
@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="projects__text">
               <h3 class="projects__caption">${data[i].title}</h3>
               <div class="projects__technologes">
-                <span class="projects__technologes-text">Верстка на HTML</span>
-                <span class="projects__technologes-text">Работа с векторной графикой</span>
-                <span class="projects__technologes-text">Сборка проекта на Gulp</span>
-                <span class="projects__technologes-text">Работа с Git и GitHub</span>
+                <span class="projects__technologes-text">${data[i].text_1}</span>
+                <span class="projects__technologes-text">${data[i].text_2}</span>
+                <span class="projects__technologes-text">${data[i].text_3}</span>
+                ${data[i].text_4 ? `<span class="projects__technologes-text">${data[i].text_4}</span>` : ''}
               </div>
               <div class="projects__buttons">
                 <button class="projects__btn main-link btn-reset" data-graph-path="project-${data[i].id}">

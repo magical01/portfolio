@@ -1,6 +1,10 @@
 .header {
   padding-bottom: 40px;
 
+  @include xxl-tablet {
+    padding-bottom: 0;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -25,11 +29,14 @@
     }
   }
 
-
   &__link {
     padding: 12px 36px;
     font-size: 18px;
     line-height: 23px;
+
+    @include small-tablet {
+      display: none;
+    }
 
     &:focus {
       outline: 1px solid var(--accent-color);
@@ -40,12 +47,49 @@
 }
 
 .nav {
+  @include small-tablet {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 100vh;
+    visibility: hidden;
+    opacity: 0;
+    overflow-y: auto;
+    background: linear-gradient(176deg, #060606 1.92%, #000000 98.75%);
+    transform: translateX(150%);
+    transition: opacity .4s, visibility .4s, transform .4s;
+
+    @include mini-mobile {
+      width: 100%;
+    }
+  }
+
   &__list {
     display: flex;
+
+    @include small-tablet {
+      flex-direction: column;
+      margin-bottom: 42px;
+    }
   }
 
   &__item + &__item {
     margin-left: 70px;
+
+    @include md-tablet {
+      margin-left: 40px;
+    }
+
+    @include small-tablet {
+      margin-top: 26px;
+      margin-left: 0px;
+    }
   }
 
   &__link {
@@ -53,6 +97,12 @@
     font-size: 16px;
     color: rgba(#fff, 0.8);
     transition: all .3s;
+
+    @include small-tablet {
+      font-size: 20px;
+      line-height: 21px;
+      color: rgba(#fff, 1);
+    }
 
     &:before {
       content: "";
@@ -80,4 +130,42 @@
     }
   }
 
+  &__social-mobile {
+    display: none;
+
+    @include small-tablet {
+      display: flex;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__contact {
+    display: none;
+
+    @include small-tablet {
+      display: inline-block;
+    }
+
+    & + & {
+      margin-top: 30px;
+    }
+  }
+}
+
+.burger {
+  display: none;
+  z-index: 40;
+
+  @include small-tablet {
+    display: block;
+
+    @include burger
+  }
+}
+
+.menu--active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity .4s,visibility .4s,transform .4s;
 }
